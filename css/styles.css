@@ -61,9 +61,9 @@ nav details summary {
     font-weight: bold;
 }
 
-ol li:nth-child(odd) {
+/* ol li:nth-child(odd) {
     border: 1px solid red;
-}
+} */
 
 h1 {
     font-size: 60px; 
@@ -77,3 +77,39 @@ h2 {
 h3 {
     font-size: 1.5em;
 }
+
+pre {
+    background: #FEC62E;
+}
+
+.hero {
+    background: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
+    /* background-repeat: no-repeat;
+    background-position: left 50px bottom 50px;
+    background-size: cover; */
+    height: 350px;
+}
+
+.section-content {
+    counter-reset: titleList;
+}
+
+.section-content h3 {
+    counter-increment: titleList;
+}
+
+.section-content h3::before {
+    content: counter(titleList, decimal);
+}
+
+.section-content h3::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background: var(--gray30);
+    display: inline-block;
+}
+
+/* ::selection {
+    background: mediumpurple;
+} */
