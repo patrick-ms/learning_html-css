@@ -125,7 +125,7 @@ h3 {
     margin-top: 16px;
     margin-bottom: 24px;
     font-weight: normal;
-    position: sticky;
+    position: relative; /*si esta en sticky, href no sube solo baja; funciona si el id está en img, en vez del h3*/
     top: 0;
     background: white;
     /* padding: 20px; */
@@ -158,16 +158,12 @@ blockquote span::before {
     content: '-';
 }
 .header {
-    /* border: 1px solid red; */
     position: sticky;
     top: 0;
 }
 
 .header-content {
     position: relative;
-}
-.main {
-    /* background: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
 }
 
 .wrapper {
